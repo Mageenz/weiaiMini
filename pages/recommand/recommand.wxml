@@ -1,0 +1,29 @@
+<view class="container">
+  <!-- 引导提示 -->
+  <view class='tips' wx:if='{{isTipsShow}}' bindtap='handleCloseTips'>
+    <image src='/assets/images/iconTip2.png' class='tip tip2'></image>
+    <image src='/assets/images/iconTip1.png' class='tip tip1'></image>
+    <image src='/assets/images/iconTip3.png' class='tip tip3'></image>
+  </view>
+
+  <!-- 拖拽模块 -->
+  <movable-area class='recommand-wrap'>
+    <movable-view
+      wx:for='{{list}}'
+      data-index='{{index}}'
+      wx:key='{{item.name}}'
+      animation='{{true}}'
+      damping='{{30}}'
+      bindtouchstart='handleTouchStart'
+      bindtouchend='handleTouchEnd'
+      bindtouchcancel='handleTouchEnd'
+      class='recommand-item'
+      x="{{item.x}}"
+      y="{{item.y}}"
+      style='{{"z-index:" + (1000 - index) + ";width:" + (windowWidth - 20) + "px;" + "height:" + (windowHeight-20) + "px"}}'
+      direction="all">
+        <view class='photo' style='{{"background-image:" + "url(" + item.imgUrl + ")"}}'></view>
+        <view class='info'></view>
+      </movable-view>
+  </movable-area>
+</view>

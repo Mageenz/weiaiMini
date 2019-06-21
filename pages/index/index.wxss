@@ -1,0 +1,6 @@
+.demo {
+  width: 710rpx;
+  height: 200rpx;
+  background-color: red;
+  margin: 0 auto;
+}
