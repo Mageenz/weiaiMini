@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/recommand/recommand",
-    "pages/personalityTest/personalityTest",
+    "pages/personalityTest/personalityTest"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,13 +14,13 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/recommand/recommand",
         "text": "消息",
         "iconPath": "assets/images/iconMessages.png",
         "selectedIconPath": "assets/images/iconMessages.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/recommand/recommand",
         "text": "交友",
         "iconPath": "assets/images/iconFriends.png",
         "selectedIconPath": "assets/images/iconFriends.png"
@@ -32,13 +32,13 @@
         "selectedIconPath": "assets/images/iconHeart.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/recommand/recommand",
         "text": "盲约",
         "iconPath": "assets/images/iconMeet.png",
         "selectedIconPath": "assets/images/iconMeet.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/recommand/recommand",
         "text": "我的",
         "iconPath": "assets/images/iconMy.png",
         "selectedIconPath": "assets/images/iconMy.png"

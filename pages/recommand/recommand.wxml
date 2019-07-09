@@ -23,7 +23,12 @@
       style='{{"z-index:" + (1000 - index) + ";width:" + (windowWidth - 20) + "px;" + "height:" + (windowHeight-20) + "px"}}'
       direction="all">
         <view class='photo' style='{{"background-image:" + "url(" + item.imgUrl + ")"}}'></view>
-        <view class='info'></view>
+        <view class='info'>
+          <view class='name'>小猫咪</view>
+          <view class='flex'>
+            
+          </view>
+        </view>
       </movable-view>
   </movable-area>
 </view>

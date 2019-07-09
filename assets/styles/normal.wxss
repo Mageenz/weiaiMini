@@ -1,0 +1,5 @@
+view {
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-family:PingFangSC-Regular;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/recommand/recommand",
     "pages/personalityTest/personalityTest"
   ],
   "window": {
@@ -8,5 +9,40 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/recommand/recommand",
+        "text": "消息",
+        "iconPath": "assets/images/iconMessages.png",
+        "selectedIconPath": "assets/images/iconMessages.png"
+      },
+      {
+        "pagePath": "pages/recommand/recommand",
+        "text": "交友",
+        "iconPath": "assets/images/iconFriends.png",
+        "selectedIconPath": "assets/images/iconFriends.png"
+      },
+      {
+        "pagePath": "pages/recommand/recommand",
+        "text": "推荐",
+        "iconPath": "assets/images/iconHeart.png",
+        "selectedIconPath": "assets/images/iconHeart.png"
+      },
+      {
+        "pagePath": "pages/recommand/recommand",
+        "text": "盲约",
+        "iconPath": "assets/images/iconMeet.png",
+        "selectedIconPath": "assets/images/iconMeet.png"
+      },
+      {
+        "pagePath": "pages/recommand/recommand",
+        "text": "我的",
+        "iconPath": "assets/images/iconMy.png",
+        "selectedIconPath": "assets/images/iconMy.png"
+      }
+    ]
+  }
 }

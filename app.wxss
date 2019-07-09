@@ -1,6 +1,6 @@
-view {
-  font-size: 28rpx;
-  line-height: 1.5;
-  font-family:PingFangSC-Regular;
-}
+@import "./assets/styles/distance.wxss";
+@import "./assets/styles/font.wxss";
+@import "./assets/styles/color.wxss";
+@import "./assets/styles/flex.wxss";
+@import "./assets/styles/normal.wxss";
 

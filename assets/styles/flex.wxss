@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex-1 {
+  flex: 1;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-top {
+  align-items: flex-start;
+}
+.ai-bottom {
+  align-items: flex-end;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-around {
+  justify-content: space-around;
+}
