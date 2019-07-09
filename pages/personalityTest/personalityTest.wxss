@@ -1,0 +1,60 @@
+/* pages/personalityTest/personalityTest.wxss */
+.container {
+  padding: 0 32rpx;
+}
+.des {
+  padding: 20rpx 0;
+  border-bottom: 1rpx #DDDDDD solid;
+  font-size: 28rpx;
+  color: #263238;
+}
+.question {
+  padding-top: 20rpx;
+}
+.order, .title {
+  font-size: 36rpx;
+  font-family:PingFangSC-Semibold;
+  color: #263238;
+}
+.order {
+  margin-bottom: 10rpx;
+}
+.title {
+  margin-bottom: 40rpx;
+}
+.answers {
+
+}
+.answer {
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: left;
+  padding-left: 55rpx;
+  font-size: 36rpx;
+  color: #676F73;
+  background-color: #FAFAFA;
+  margin-bottom: 30rpx;
+  border-radius:6rpx;
+}
+.answer.active {
+  background-color: #E8EAEB;
+}
+.prev-btn {
+  font-size: 36rpx;
+  color: #2196F3;
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+  margin-top: 59rpx;
+}
+.submit-btn {
+  font-size: 36rpx;
+  color: #FFFFFF;
+  background-color: #F76260;
+  text-align: center;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

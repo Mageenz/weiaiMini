@@ -64,6 +64,7 @@ Page({
     })
   },
   onLoad() {
+    // 获取可用宽、高度
     wx.getSystemInfo({
       success: res => {
         console.log('res', res)
@@ -73,6 +74,7 @@ Page({
         })
       }
     })
+    
     setTimeout(() => {
       this.setData({
         list: [
