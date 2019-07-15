@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/personalityTest/personalityTest"
+    "pages/personalityTest/personalityTest",
+    "pages/testResult/testResult"
   ],
   "window": {
     "backgroundTextStyle": "light",

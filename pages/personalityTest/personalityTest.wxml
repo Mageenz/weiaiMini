@@ -23,5 +23,5 @@
     </view>
   </view>
   <view class='prev-btn' bindtap='handlePrev' wx:if='{{currentIndex > 0}}'>上一题</view>
-  <view class='submit-btn' wx:if='{{currentIndex === questions.length - 1}}'>关注关注-查看我的三观</view>
+  <view class='submit-btn' bindtap='handleSubmit' wx:if='{{currentIndex === questions.length - 1}}'>关注关注-查看我的三观</view>
 </view>

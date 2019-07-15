@@ -28,6 +28,11 @@ Page({
     ],
     answers: ['A', 'A']
   },
+  handleSubmit() {
+    wx.navigateTo({
+      url: '/pages/testResult/testResult',
+    })
+  },
   handleChoose(e) {
     const { questionindex, answername } = e.currentTarget.dataset
 
@@ -62,7 +67,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
