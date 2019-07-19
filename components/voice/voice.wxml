@@ -1,0 +1,13 @@
+<dialog position='bottom'>
+  <view slot='content' class='voice-container'>
+    <view class='voice-title'>请用一段语音介绍自己</view>
+    <view class='voice-btn' bindtap='handleStartRecord'>
+      <view class='voice-text' wx:if='{{!recording}}'>
+        <view style='margin-bottom: 10rpx;'>开始</view>
+        <view>录音</view>
+      </view>
+      <view class='voice-count' wx:if='{{recording}}'>{{time}}s</view>
+      <image src='/assets/images/iconVoice.png' class='icon-voice'></image>
+    </view>
+  </view>
+</dialog>

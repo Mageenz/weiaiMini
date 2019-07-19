@@ -1,0 +1,40 @@
+.voice-container {
+  position: relative;
+  padding-top: 53rpx;
+  padding-bottom: 34rpx;
+}
+.voice-title {
+  font-size: 24rpx;
+  margin-bottom: 32rpx;
+}
+.voice-btn {
+  width: 148rpx;
+  height: 148rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.icon-voice {
+  width: 148rpx;
+  height: 148rpx;
+  font-size: 26rpx;
+}
+.voice-text {
+  position: absolute;
+  top: 32rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.voice-text > view {
+  font-family:PingFangSC-Medium;
+  letter-spacing:2rpx;
+  color: #565656;
+}
+.voice-count {
+  position: absolute;
+  top: 55rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family:PingFangSC-Medium;
+  color: #565656;
+  letter-spacing:2rpx;
+}

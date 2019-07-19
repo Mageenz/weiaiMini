@@ -56,198 +56,198 @@
 }
 
 .mr10 {
-  margin-top: 10rpx;
+  margin-right: 10rpx;
 }
 .mr15 {
-  margin-top: 15rpx;
+  margin-right: 15rpx;
 }
 .mr20 {
-  margin-top: 20rpx;
+  margin-right: 20rpx;
 }
 .mr25 {
-  margin-top: 25rpx;
+  margin-right: 25rpx;
 }
 .mr30 {
-  margin-top: 30rpx;
+  margin-right: 30rpx;
 }
 .mr35 {
-  margin-top: 35rpx;
+  margin-right: 35rpx;
 }
 .mr40 {
-  margin-top: 40rpx;
+  margin-right: 40rpx;
 }
 .mr45 {
-  margin-top: 45rpx;
+  margin-right: 45rpx;
 }
 .mr50 {
-  margin-top: 50rpx;
+  margin-right: 50rpx;
 }
 
 .mb10 {
-  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 .mb15 {
-  margin-top: 15rpx;
+  margin-bottom: 15rpx;
 }
 .mb20 {
-  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 .mb25 {
-  margin-top: 25rpx;
+  margin-bottom: 25rpx;
 }
 .mb30 {
-  margin-top: 30rpx;
+  margin-bottom: 30rpx;
 }
 .mb35 {
-  margin-top: 35rpx;
+  margin-bottom: 35rpx;
 }
 .mb40 {
-  margin-top: 40rpx;
+  margin-bottom: 40rpx;
 }
 .mb45 {
-  margin-top: 45rpx;
+  margin-bottom: 45rpx;
 }
 .mb50 {
-  margin-top: 50rpx;
+  margin-bottom: 50rpx;
 }
 
 .ml10 {
-  margin-top: 10rpx;
+  margin-left: 10rpx;
 }
 .ml15 {
-  margin-top: 15rpx;
+  margin-left: 15rpx;
 }
 .ml20 {
-  margin-top: 20rpx;
+  margin-left: 20rpx;
 }
 .ml25 {
-  margin-top: 25rpx;
+  margin-left: 25rpx;
 }
 .ml30 {
-  margin-top: 30rpx;
+  margin-left: 30rpx;
 }
 .ml35 {
-  margin-top: 35rpx;
+  margin-left: 35rpx;
 }
 .ml40 {
-  margin-top: 40rpx;
+  margin-left: 40rpx;
 }
 .ml45 {
-  margin-top: 45rpx;
+  margin-left: 45rpx;
 }
 .ml50 {
-  margin-top: 50rpx;
+  margin-left: 50rpx;
 }
 
 /* padding类 */
 .pt10 {
-  margin-top: 10rpx;
+  padding-top: 10rpx;
 }
 .pt15 {
-  margin-top: 15rpx;
+  padding-top: 15rpx;
 }
 .pt20 {
-  margin-top: 20rpx;
+  padding-top: 20rpx;
 }
 .pt25 {
-  margin-top: 25rpx;
+  padding-top: 25rpx;
 }
 .pt30 {
-  margin-top: 30rpx;
+  padding-top: 30rpx;
 }
 .pt35 {
-  margin-top: 35rpx;
+  padding-top: 35rpx;
 }
 .pt40 {
-  margin-top: 40rpx;
+  padding-top: 40rpx;
 }
 .pt45 {
-  margin-top: 45rpx;
+  padding-top: 45rpx;
 }
 .pt50 {
-  margin-top: 50rpx;
+  padding-top: 50rpx;
 }
 
 .pr10 {
-  margin-top: 10rpx;
+  padding-right: 10rpx;
 }
 .pr15 {
-  margin-top: 15rpx;
+  padding-right: 15rpx;
 }
 .pr20 {
-  margin-top: 20rpx;
+  padding-right: 20rpx;
 }
 .pr25 {
-  margin-top: 25rpx;
+  padding-right: 25rpx;
 }
 .pr30 {
-  margin-top: 30rpx;
+  padding-right: 30rpx;
 }
 .pr35 {
-  margin-top: 35rpx;
+  padding-right: 35rpx;
 }
 .pr40 {
-  margin-top: 40rpx;
+  padding-right: 40rpx;
 }
 .pr45 {
-  margin-top: 45rpx;
+  padding-right: 45rpx;
 }
 .pr50 {
-  margin-top: 50rpx;
+  padding-right: 50rpx;
 }
 
 .pb10 {
-  margin-top: 10rpx;
+  padding-bottom: 10rpx;
 }
 .pb15 {
-  margin-top: 15rpx;
+  padding-bottom: 15rpx;
 }
 .pb20 {
-  margin-top: 20rpx;
+  padding-bottom: 20rpx;
 }
 .pb25 {
-  margin-top: 25rpx;
+  padding-bottom: 25rpx;
 }
 .pb30 {
-  margin-top: 30rpx;
+  padding-bottom: 30rpx;
 }
 .pb35 {
-  margin-top: 35rpx;
+  padding-bottom: 35rpx;
 }
 .pb40 {
-  margin-top: 40rpx;
+  padding-bottom: 40rpx;
 }
 .pb45 {
-  margin-top: 45rpx;
+  padding-bottom: 45rpx;
 }
 .pb50 {
-  margin-top: 50rpx;
+  padding-bottom: 50rpx;
 }
 
 .pl10 {
-  margin-top: 10rpx;
+  padding-left: 10rpx;
 }
 .pl15 {
-  margin-top: 15rpx;
+  padding-left: 15rpx;
 }
 .pl20 {
-  margin-top: 20rpx;
+  padding-left: 20rpx;
 }
 .pl25 {
-  margin-top: 25rpx;
+  padding-left: 25rpx;
 }
 .pl30 {
-  margin-top: 30rpx;
+  padding-left: 30rpx;
 }
 .pl35 {
-  margin-top: 35rpx;
+  padding-left: 35rpx;
 }
 .pl40 {
-  margin-top: 40rpx;
+  padding-left: 40rpx;
 }
 .pl45 {
-  margin-top: 45rpx;
+  padding-left: 45rpx;
 }
 .pl50 {
-  margin-top: 50rpx;
+  padding-left: 50rpx;
 }

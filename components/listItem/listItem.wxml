@@ -1,0 +1,8 @@
+<view hover-class='hover-class' hover-stay-time='100' class='listItem' bindtap='handleTap' style='{{"border-bottom:" + (last ? "none" : "1rpx #F6F6F6 solid")}}'>
+  <image class='label-icon' src='{{labelIcon}}' wx:if='{{labelIcon}}'></image>
+  <text class='label'>{{label}}</text>
+  <view class='placeholder' wx:if='{{placeholder && !content}}'>{{placeholder}}</view>
+  <view class='content' wx:if='{{content}}'>{{content}}</view>
+  <slot></slot>
+  <image class='arrow-right' wx:if='{{showArrow}}' src='/assets/images/iconArrowRight.png'></image>
+</view>

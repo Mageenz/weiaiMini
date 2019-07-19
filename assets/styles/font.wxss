@@ -1,8 +1,8 @@
 /* 字体 */
-.pf-m {
+.ff-m {
   font-family:PingFangSC-Medium;
 }
-.pf-r {
+.ff-r {
   font-family:PingFangSC-Regular;
 }
 

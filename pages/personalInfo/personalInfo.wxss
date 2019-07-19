@@ -1,0 +1,19 @@
+/* pages/personalInfo/personalInfo.wxss */
+.container {
+  height: 100vh;
+}
+.photo-wrap {
+  width: 690rpx;
+  height: 257rpx;
+  margin: 0 auto 30rpx auto;
+}
+.photo {
+  width: 147rpx;
+  height: 147rpx;
+  border-radius: 50%;
+}
+.btn {
+  width: 500rpx;
+  margin: 0 auto;
+  margin-top: 140rpx;
+}

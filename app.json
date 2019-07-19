@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/recommand/recommand",
-    "pages/personalityTest/personalityTest"
+    "pages/personalityTest/personalityTest",
+    "pages/personalInfo/personalInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,5 +45,12 @@
         "selectedIconPath": "assets/images/iconMy.png"
       }
     ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "list-item": "components/listItem/listItem",
+    "wa-button": "components/waButton/waButton",
+    "dialog": "components/dialog/dialog",
+    "voice": "components/voice/voice"
   }
 }

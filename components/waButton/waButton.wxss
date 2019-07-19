@@ -1,0 +1,18 @@
+.wa-button {
+  text-align: center;
+  border-radius:50rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  line-height: 90rpx;
+}
+.wa-button.disabled {
+  opacity: 0.6;
+}
+.wa-button.primary {
+  background-color: #F76260;
+}
+.hover-class {
+  opacity: 0.9;
+}

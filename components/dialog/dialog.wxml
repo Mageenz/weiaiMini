@@ -1,0 +1,8 @@
+<view class='dialog'>
+  <view class='{{"dialog-container " + position}}'>
+    <view class='dialog-title' wx:if='{{title}}'>{{title}}</view>
+    <view class='dialog-content' wx:if='{{content}}'>{{content}}</view>
+    <slot name='content'></slot>
+    <slot name='foot'></slot>
+  </view>
+</view>

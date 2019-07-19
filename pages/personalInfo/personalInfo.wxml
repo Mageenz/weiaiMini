@@ -1,0 +1,44 @@
+<view class='container bg-grey-light pt20'>
+  <view class='flex bg-white photo-wrap'>
+    <image class='photo bg-red ml30 mr30'></image>
+    <view class='flex-1'>
+      <view class='fs26 mb15'>点击上传头像照片</view>
+      <view class='fs26'>上传个人真实美照有助于提高关注度哦</view>
+    </view>
+  </view>
+
+  <view>
+    <list-item label-icon='/assets/images/iconBirthday.png' label='生日：'>
+      <picker 
+        class='picker'
+        mode='date' 
+        value='{{form.birthday}}' 
+        start='1959-1-1' 
+        end='2001-12-31' 
+        bindchange='handleBirthdayChange'>
+        <view class='{{"picker-content " + (form.birthday ? "" : "c-light-x")}}'>{{form.birthday || '请选择生日'}}</view>
+      </picker>
+    </list-item>
+    <list-item label-icon='/assets/images/iconJob.png' label='工作行业及职位：'>
+      <picker class='picker' mode='selector' range='{{source.jobList}}' value='{{form.job}}' bindchange='handleJobChange'>
+        <view class='{{"picker-content " + (source.jobList[form.job] ? "" : "c-light-x")}}'>{{source.jobList[form.job] || '请选择工作行业及职位'}}</view>
+      </picker>
+    </list-item>
+    <list-item label-icon='/assets/images/iconHeight.png' label='身高：'>
+      <picker class='picker' mode='selector' range='{{source.heightList}}' value='{{form.height}}' bindchange='handleHeightChange'>
+        <view class='{{"picker-content " + (source.heightList[form.height] ? "" : "c-light-x")}}'>{{source.heightList[form.height] || '请选择身高'}}</view>
+      </picker>
+    </list-item>
+    <list-item label-icon='/assets/images/iconEducation.png' label='学历：'>
+      <picker class='picker' mode='selector' range='{{source.educationList}}' value='{{form.education}}' bindchange='handleEducationChange'>
+        <view class='{{"picker-content " + (source.educationList[form.education] ? "" : "c-light-x")}}'>{{source.educationList[form.education] || '请选择学历'}}</view>
+      </picker>
+    </list-item>
+  </view>
+
+  <view class='btn'>
+    <wa-button>下一步</wa-button>
+  </view>
+
+  <voice wx:if='{{voiceDialogShow}}'></voice>
+</view>

@@ -1,5 +1,16 @@
 view {
   font-size: 28rpx;
-  line-height: 1.5;
+  line-height: 1;
   font-family:PingFangSC-Regular;
+  box-sizing: border-box;
+  color: #222222;
+}
+.picker {
+  flex: 1;
+  height: 100rpx;
+}
+.picker .picker-content {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
 }
