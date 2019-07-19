@@ -19,9 +19,11 @@
       data-questionindex='{{questionIndex}}'
       data-answername='{{answerItem.name}}'
       bindtap='handleChoose'>
-      <view class='{{"answer" + (answers[questionIndex] === answerItem.name ? " active" : "")}}'>{{answerItem.des}}</view>
+      <view class='{{"answer" + (answers[questionIndex] === answerItem.name ? " active" : "")}}'>
+        <text>{{answerItem.des}}</text>
+      </view>
     </view>
   </view>
   <view class='prev-btn' bindtap='handlePrev' wx:if='{{currentIndex > 0}}'>上一题</view>
-  <view class='submit-btn' bindtap='handleSubmit' wx:if='{{currentIndex === questions.length - 1}}'>关注关注-查看我的三观</view>
+  <view hover-class='hover-class' class='submit-btn' bindtap='handleSubmit' wx:if='{{currentIndex === questions.length - 1}}'>关注关注-查看我的三观</view>
 </view>
