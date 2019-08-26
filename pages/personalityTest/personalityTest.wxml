@@ -1,29 +1,43 @@
 <view class='container'>
-  <view class='des'>
-    <view class='text'>想了解你的世界观，价值观，人生观吗？</view>
-    <view class='text'>想知道最适合你的另一半是怎么样的吗？</view>
-    <view class='text'>请按个人实际情况回答以下问题。</view>
-  </view>
-  <view 
-    class='question' 
-    wx:for='{{questions}}' 
-    wx:for-index='questionIndex' 
-    wx:if='{{questionIndex === currentIndex}}'>
-    <view class='order'>{{questionIndex + 1}} / 10</view>
-    <view class='title'>{{item.title}}</view>
-    <view
-      class='answers'
-      wx:for='{{item.answers}}'
-      wx:for-item='answerItem'
-      wx:for-index='answerIndex'
-      data-questionindex='{{questionIndex}}'
-      data-answername='{{answerItem.name}}'
-      bindtap='handleChoose'>
-      <view class='{{"answer" + (answers[questionIndex] === answerItem.name ? " active" : "")}}'>
-        <text>{{answerItem.des}}</text>
+  <view wx:if='{{questions.length}}'>
+    <view class='des'>
+      <view class='text'>想了解你的世界观，价值观，人生观吗？</view>
+      <view class='text'>想知道最适合你的另一半是怎么样的吗？</view>
+      <view class='text'>请按个人实际情况回答以下问题。</view>
+    </view>
+    <view 
+      class='question' 
+      wx:for='{{questions}}' 
+      wx:for-index='questionIndex' 
+      wx:if='{{questionIndex === currentIndex}}'>
+      <view class='order'>{{questionIndex + 1}} / {{questions.length}}</view>
+      <view class='title'>{{item.title}}</view>
+      <view
+        class='answers'
+        wx:for='{{item.options}}'
+        wx:for-item='answerItem'
+        wx:for-index='answerIndex'
+        data-questionindex='{{questionIndex}}'
+        data-optionid='{{answerItem.optionId}}'
+        data-optionreview='{{answerItem.optionReview}}'
+        bindtap='handleChoose'>
+        <view class='{{"answer" + (answers[questionIndex] === answerItem.optionId ? " active" : "")}}'>
+          <text>{{answerItem.option}}</text>
+        </view>
       </view>
     </view>
+    <view class='prev-btn' bindtap='handlePrev' wx:if='{{currentIndex > 0}}'>上一题</view>
+    <view hover-class='hover-class' class='submit-btn' bindtap='handleSubmit' wx:if='{{answers.length === 8}}'>点击关注-查看我的三观</view>
   </view>
-  <view class='prev-btn' bindtap='handlePrev' wx:if='{{currentIndex > 0}}'>上一题</view>
-  <view hover-class='hover-class' class='submit-btn' bindtap='handleSubmit' wx:if='{{currentIndex === questions.length - 1}}'>关注关注-查看我的三观</view>
+  <view class='dialog' wx:if='{{registerDialogShow}}'>
+    <view class='dialog-content'>
+      <image src='/assets/images/imgLogo.png' mode='widthFix'></image>
+      <view>本小程序须授权后才能使用</view>
+      <view>您可点击"授权申请"并"允许"使用该小程序</view>
+      <button class='btn-register' hover-class='hover-class' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='handleGetUserInfo'>注册</button>
+    </view>
+  </view>
+  <view class='canvas-container'>
+    <canvas canvas-id='canvas' class='canvas' bindlongtap='handleSaveImg'></canvas>
+  </view>
 </view>

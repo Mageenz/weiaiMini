@@ -1,3 +1,5 @@
+const apis = require('../../assets/utils/apis.js');
+
 Page({
 
   /**
@@ -6,11 +8,24 @@ Page({
   data: {
 
   },
+  handleGetUserInfo({detail}) {
+    console.log('detail', detail)
+    wx.login({
+      success: res => {
+        apis.register({
+          encryptedData: detail.encryptedData,
+          iv: detail.iv,
+          code: res.code
+        }).then(res => {
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
