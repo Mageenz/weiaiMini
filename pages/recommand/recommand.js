@@ -64,6 +64,12 @@ Page({
     })
   },
   onLoad() {
+    wx.getUserInfo({
+      success: res => {
+        console.log('res', res)
+      }
+    })
+
     // 获取可用宽、高度
     wx.getSystemInfo({
       success: res => {
