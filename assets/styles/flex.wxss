@@ -8,10 +8,10 @@
 .ai-center {
   align-items: center;
 }
-.ai-top {
+.ai-start {
   align-items: flex-start;
 }
-.ai-bottom {
+.ai-end {
   align-items: flex-end;
 }
 .jc-center {

@@ -6,6 +6,7 @@
   padding-right: 30rpx;
   line-height: 1;
   background-color: #FFFFFF;
+  position: relative;
 }
 .label-icon {
   width: 30rpx;

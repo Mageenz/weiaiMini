@@ -1,0 +1,9 @@
+<view class='pt30 pb30 pl30 mh100 bg-grey-light'>
+  <view class='albums' style='min-height: 1000rpx;'>
+    <view class='photo' wx:for='{{albumList}}' style='{{"background-image: url(" + item.picAddress + ")"}}'></view>
+    <image bindtap='upload' class='icon-upload' src='../../assets/images/iconUpload.png'></image>
+  </view>
+  <view class='p30'>
+    <wa-button bindclick='submit'>保存</wa-button>
+  </view>
+</view>

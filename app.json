@@ -1,59 +1,51 @@
 {
   "pages": [
-    "pages/recommand/recommand",
+    "pages/recommend/recommend",
     "pages/personalityTest/personalityTest",
     "pages/personalInfo/personalInfo",
     "pages/testResult/testResult",
-    "pages/login/login"
+    "pages/mine/mine",
+    "pages/setting/setting",
+    "pages/pay/pay",
+    "pages/userDetail/userDetail",
+    "pages/album/album",
+    "pages/loverList/loverList",
+    "pages/like/like"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "善果",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
+    "selectedColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/recommand/recommand",
-        "text": "消息",
-        "iconPath": "assets/images/iconMessages.png",
-        "selectedIconPath": "assets/images/iconMessages.png"
-      },
-      {
-        "pagePath": "pages/recommand/recommand",
+        "pagePath": "pages/recommend/recommend",
         "text": "交友",
-        "iconPath": "assets/images/iconFriends.png",
-        "selectedIconPath": "assets/images/iconFriends.png"
+        "iconPath": "assets/images/iconHeartGrey.png",
+        "selectedIconPath": "assets/images/iconHeartRed.png"
       },
       {
-        "pagePath": "pages/recommand/recommand",
-        "text": "推荐",
-        "iconPath": "assets/images/iconHeart.png",
-        "selectedIconPath": "assets/images/iconHeart.png"
-      },
-      {
-        "pagePath": "pages/recommand/recommand",
-        "text": "盲约",
-        "iconPath": "assets/images/iconMeet.png",
-        "selectedIconPath": "assets/images/iconMeet.png"
-      },
-      {
-        "pagePath": "pages/recommand/recommand",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "assets/images/iconMy.png",
-        "selectedIconPath": "assets/images/iconMy.png"
+        "iconPath": "assets/images/iconMineGrey.png",
+        "selectedIconPath": "assets/images/iconMineRed.png"
       }
     ]
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "list-item": "components/listItem/listItem",
-    "wa-button": "components/waButton/waButton",
     "dialog": "components/dialog/dialog",
-    "voice": "components/voice/voice"
+    "voice": "components/voice/voice",
+    "login": "components/login/login",
+    "wa-picker": "components/waPicker/waPicker",
+    "wa-button": "components/waButton/waButton",
+    "wa-input": "components/waInput/waInput"
   },
   "permission": {
     "scope.userLocation": {

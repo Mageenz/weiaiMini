@@ -1,0 +1,82 @@
+<view class="container">
+  <!-- 引导提示 -->
+  <view class='tips' wx:if='{{tipVisible}}' bindtap='handleCloseTips'>
+    <image src='/assets/images/iconTip2.png' class='tip tip2'></image>
+  </view>
+  <!-- 拖拽模块 -->
+  <movable-area class='recommend-wrap'>
+    <movable-view
+      wx:for='{{list}}'
+      data-index='{{index}}'
+      data-id='{{item.userId}}'
+      wx:key='{{item.name}}'
+      animation='{{true}}'
+      damping='{{30}}'
+      bindtap='toDetail'
+      bindtouchstart='handleTouchStart'
+      bindtouchend='handleTouchEnd'
+      bindtouchcancel='handleTouchEnd'
+      class='recommend-item'
+      x="{{item.x}}"
+      y="{{item.y}}"
+      style='{{"z-index:" + (1000 - index) + ";width:" + (windowWidth - 20) + "px;" + "height:" + (windowHeight - 20) + "px"}}'
+      direction="all">
+        <view class='photo' style='{{"background-image:" + "url(" + item.coverAddress + ")"}}'></view>
+        <view class='info'>
+          <view class='fs30 fw-b mb30'>{{item.username}}</view>
+          <view class='flex'>
+            <view class='tag age flex aic'>
+              <image wx:if='{{item.sex === 2}}' src='../../assets/images/iconGender.png'></image>
+              <text>{{item.age}}</text>
+            </view>
+            <text class='tag height'>{{item.height}}cm</text>
+            <text class='tag education'>{{educationMap[item.education]}}</text>
+            <text class='tag job'>{{item.work}}</text>
+          </view>
+        </view>
+      </movable-view>
+  </movable-area>
+
+  <!-- 筛选 -->
+  <view class='search flex aic' bindtap='openSearch'>
+    <image src='../../assets/images/iconSearch.png'></image>
+    <text>筛选</text>
+  </view>
+  <view class='search-container' wx:if='{{searchVisible}}' bindtap='closeSearch'>
+    <view class='search-content' catchtap='cancelPropagation'>
+      <view class='search-item'>
+        <text>区域</text>
+        <picker mode='region' value='{{region}}' bindchange='handleRegionChange'>
+          <view class='search-value flex aic pr30'>
+            <view class='flex-1'>{{region[0] ? region[0] + region[1] + region[2] : '全部'}}</view>
+            <image src='../../assets/images/iconSelect.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='search-item'>
+        <text>年龄</text>
+        <picker range='{{ageRange}}' value='{{age}}' bindchange='handleAgeChange'>
+          <view class='search-value flex aic pr30'>
+            <view class='flex-1'>{{age === '' ? '全部' : ageRange[age]}}</view>
+            <image src='../../assets/images/iconSelect.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='search-item'>
+        <text>身高</text>
+        <picker range='{{heightRange}}' value='{{height}}' bindchange='handleHeightChange'>
+          <view class='search-value flex aic pr30'>
+            <view class='flex-1'>{{height === '' ? '全部' : heightRange[height]}}</view>
+            <image src='../../assets/images/iconSelect.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='btn-search'>
+        <wa-button bindclick='handleSearchSubmit'>确定</wa-button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 登录 -->
+  <login wx:if='{{registerVisible}}' bindlogin='handleLogin' />
+</view>

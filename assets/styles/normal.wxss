@@ -1,9 +1,21 @@
-view {
+page {
   font-size: 28rpx;
   line-height: 1;
   font-family:PingFangSC-Regular;
   box-sizing: border-box;
   color: #222222;
+}
+view {
+  line-height: 1;
+}
+.relative {
+  position: relative;
+}
+.bb-light {
+  border-bottom: 1rpx #E6E6E6 solid;
+}
+.mh100 {
+  min-height: 100vh;
 }
 .picker {
   flex: 1;

@@ -1,0 +1,8 @@
+input {
+  height: 100rpx;
+  text-align: right;
+  flex: 1;
+}
+.placeholder {
+  color: #C4C4C4;
+}

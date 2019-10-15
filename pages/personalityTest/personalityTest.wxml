@@ -29,14 +29,7 @@
     <view class='prev-btn' bindtap='handlePrev' wx:if='{{currentIndex > 0}}'>上一题</view>
     <view hover-class='hover-class' class='submit-btn' bindtap='handleSubmit' wx:if='{{answers.length === 8}}'>点击关注-查看我的三观</view>
   </view>
-  <view class='dialog' wx:if='{{registerDialogShow}}'>
-    <view class='dialog-content'>
-      <image src='/assets/images/imgLogo.png' mode='widthFix'></image>
-      <view>本小程序须授权后才能使用</view>
-      <view>您可点击"授权申请"并"允许"使用该小程序</view>
-      <button class='btn-register' hover-class='hover-class' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='handleGetUserInfo'>注册</button>
-    </view>
-  </view>
+  <login wx:if='{{registerDialogShow}}' bindlogin='handleLogin' />
   <view class='canvas-container'>
     <canvas canvas-id='canvas' class='canvas' bindlongtap='handleSaveImg'></canvas>
   </view>

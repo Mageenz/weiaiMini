@@ -1,0 +1,19 @@
+<view class="bg" wx:if="{{list}}">
+  <view wx:if="{{list.length}}">
+    <view class="flex p30 m30" wx:for="{{list}}">
+      <image src="{{item.avator}}"></image>
+      <view class="flex-1">
+        <view>{{item.name}}</view>
+        <view>
+          <text class="mr10">{{item.age}}岁</text>
+          <text class="mr10">{{item.height}}cm</text>
+          <text class="mr10">{{item.work}}</text>
+          <text class="mr10">{{item.address}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="no-data" wx:else>
+    暂无数据
+  </view>
+</view>

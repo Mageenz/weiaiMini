@@ -4,10 +4,6 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    onDone: {
-      type: Function,
-      value: e => {}
-    }
   },
 
   /**
@@ -15,7 +11,8 @@ Component({
    */
   data: {
     recording: false,
-    time: 15
+    time: 15,
+    uploading: false
   },
 
   /**
@@ -38,7 +35,8 @@ Component({
             clearInterval(timer)
             this.setData({
               time: 15,
-              recording: false
+              recording: false,
+              uploading: true
             })
             return
           }
@@ -58,7 +56,17 @@ Component({
       recordManager.onStart(cb)
 
       recordManager.onStop(res => {
-        // this.play(res.tempFilePath)
+        wx.uploadFile({
+          url: 'https://www.shanguokj.com/weiaiwang/file/upload/common',
+          header: {
+            'Cookie': `token=${wx.getStorageSync('userInfo').cookie.value}`
+          },
+          filePath: res.tempFilePath,
+          name: 'file',
+          success: res => {
+            this.triggerEvent('complete', JSON.parse(res.data).data)
+          }
+        })
       })
 
       recordManager.onError(res => {

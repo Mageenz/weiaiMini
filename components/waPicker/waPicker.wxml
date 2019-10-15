@@ -1,0 +1,18 @@
+<view hover-class='hover-class' hover-stay-time='100' class='listItem' style='{{"border-bottom:" + (last ? "none" : "1rpx #F6F6F6 solid")}}'>
+  <image class='label-icon' src='{{labelIcon}}' wx:if='{{labelIcon}}'></image>
+  <text class='label'>{{label}}</text>
+  <picker wx:if='{{mode === "date"}}' mode='date' value='{{value}}' bindchange='handleChange'>
+    <view class='wrap'>
+      <view class='placeholder' wx:if='{{placeholder && !value}}'>{{placeholder}}</view>
+      <view class='content' wx:if='{{value}}'>{{value}}</view>
+      <image class='arrow-right' wx:if='{{showArrow}}' src='/assets/images/iconArrowRight.png'></image>
+    </view>
+  </picker>
+  <picker wx:else value='{{value}}' range='{{range}}' range-key='{{rangeKey}}' bindchange='handleChange'>
+    <view class='wrap'>
+      <view class='placeholder' wx:if='{{placeholder && !range[value]}}'>{{placeholder}}</view>
+      <view class='content' wx:if='{{range[value]}}'>{{range[value] && range[value].value}}</view>
+      <image class='arrow-right' wx:if='{{showArrow}}' src='/assets/images/iconArrowRight.png'></image>
+    </view>
+  </picker>
+</view>

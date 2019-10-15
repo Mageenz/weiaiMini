@@ -140,6 +140,15 @@
 }
 
 /* padding类 */
+.p20 {
+  padding: 20rpx;
+}
+.p30 {
+  padding: 30rpx;
+}
+.p40 {
+  padding: 40rpx;
+}
 .pt10 {
   padding-top: 10rpx;
 }

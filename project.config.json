@@ -40,19 +40,68 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
-					"name": "填写个人信息",
+					"name": "推荐",
+					"pathName": "pages/recommend/recommend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "三观评测",
+					"pathName": "pages/personalityTest/personalityTest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "完善信息",
 					"pathName": "pages/personalInfo/personalInfo",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "推荐",
-					"pathName": "pages/recommand/recommand",
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "用户详情",
+					"pathName": "pages/userDetail/userDetail",
+					"query": "userId=1566457835396746663",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "相册",
+					"pathName": "pages/album/album",
+					"query": "userId=1566457835396746663",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "喜欢我的",
+					"pathName": "pages/loverList/loverList",
 					"scene": null
 				}
 			]

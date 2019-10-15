@@ -1,0 +1,14 @@
+.albums {
+  overflow: hidden;
+}
+.icon-upload, .photo {
+  width: 220rpx;
+  height: 277rpx;
+  /* background-color: #ccc;  */
+  float: left;
+  margin-right: 15rpx;
+  margin-bottom: 15rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

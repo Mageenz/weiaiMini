@@ -1,0 +1,17 @@
+.bg {
+  background-color: #F4F4F4;
+  min-height: 100vh;
+}
+.flex {
+  background-color: #ffffff;
+}
+.no-data {
+  text-align: center;
+  padding: 60rpx;
+  color: #ccc;
+}
+image {
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 30rpx;
+}

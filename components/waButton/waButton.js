@@ -8,10 +8,6 @@ Component({
       type: Boolean,
       value: false
     },
-    onClick: {
-      type: Function,
-      value: () => {}
-    },
     type: {
       type: String,
       value: 'primary'
@@ -29,9 +25,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleClick() {
+    handleTap() {
       if(!this.properties.disabled) {
-        this.properties.onClick()
+        this.triggerEvent('click')
       }
     }
   }

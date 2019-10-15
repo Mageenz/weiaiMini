@@ -1,3 +1,0 @@
-<view>
-  <button open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='handleGetUserInfo'>登录</button>
-</view>

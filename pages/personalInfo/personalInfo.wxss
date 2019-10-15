@@ -17,3 +17,10 @@
   margin: 0 auto;
   margin-top: 140rpx;
 }
+.field-job {
+  flex: 1;
+  text-align: right;
+}
+.placeholder-class {
+  color: #C4C4C4;
+}

@@ -1,0 +1,78 @@
+.avator {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #cccccc;
+  border-radius: 50%;
+}
+.checking {
+  position: absolute;
+  left: 40rpx;
+  top: 40rpx;
+  width: 120rpx;
+  line-height: 120rpx;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 26rpx;
+}
+.user-name {
+  font-size: 34rpx;
+  min-height: 34rpx;
+  font-weight: bold;
+}
+.icon-vip {
+  width: 27rpx;
+  height: 24rpx;
+}
+.like-container {
+  box-shadow:0px 0px 19rpx 0rpx rgba(0,0,0,0.1);
+  border-radius:14rpx;
+}
+.icon-like {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.line {
+  width: 1rpx;
+  height: 30rpx;
+  background-color: #E6E6E6;
+}
+.icon-msg {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 20rpx;
+}
+.btn-view {
+  width:140rpx;
+  line-height:50rpx;
+  border-radius:30rpx;
+  border:1rpx solid rgba(145,145,145,1);
+  text-align: center;
+}
+.remark {
+  font-size: 24rpx;
+  color: #919191;
+  text-align: center;
+  padding-top: 220rpx;
+}
+.icon-phone {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.icon-wechat {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+.btn-share {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

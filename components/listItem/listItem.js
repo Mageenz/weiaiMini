@@ -24,10 +24,6 @@ Component({
       type: Boolean,
       value: true
     },
-    onClick: {
-      type: Function,
-      value: () => {}
-    },
     last: {
       type: Boolean,
       value: false
@@ -46,7 +42,7 @@ Component({
    */
   methods: {
     handleTap() {
-      this.properties.onClick()
+      this.triggerEvent('click')
     }
   }
 })

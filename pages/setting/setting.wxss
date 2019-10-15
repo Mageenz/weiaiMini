@@ -1,0 +1,28 @@
+.title {
+  display: flex;
+  align-items: center;
+  height: 85rpx;
+}
+.line {
+  width:6rpx;
+  height:20rpx;
+  background:rgba(247,98,96,1);
+  margin-right: 30rpx;
+}
+.label {
+  font-weight: bold;
+}
+.avator {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+input {
+  flex: 1;
+  text-align: right;
+}
+.voice {
+  width:200rpx;
+  height: 60rpx;
+}

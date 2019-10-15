@@ -3,6 +3,6 @@
   hover-stay-time='100' 
   class='{{"wa-button " + type + (disabled ? " disabled" : "")}}' 
   disabled='{{disabled}}' 
-  bindtap='handleClick'>
+  bindtap='handleTap'>
   <slot></slot>
 </view>

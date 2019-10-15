@@ -11,23 +11,11 @@ Page({
     optionReview: [],
     registerDialogShow: false
   },
-  handleGetUserInfo({ detail }) {
-    wx.login({
-      success: res => {
-        apis.register({
-          encryptedData: detail.encryptedData,
-          iv: detail.iv,
-          code: res.code
-        }).then(res => {
-          wx.setStorageSync('userInfo', res.data.data)
-          this.setData({
-            registerDialogShow: false,
-            userId: res.data.data.userId
-          })
-          this.getQuestionList()
-        })
-      }
+  handleLogin(e) {
+    this.setData({
+      registerDialogShow: false
     })
+    this.getQuestionList()
   },
   // 生成评测图
   createCanvas(callback) {
@@ -72,9 +60,6 @@ Page({
               'Cookie': `token=${wx.getStorageSync('userInfo').cookie.value}`
             },
             name: 'file',
-            formData: {
-              userId: this.data.userId
-            },
             success: res => {
               if (JSON.parse(res.data).status === 0) {
                 callback()
@@ -103,12 +88,10 @@ Page({
   },
   // 2个提交，题目答案提交，图片上传提交
   handleSubmit() {
-    const userId = wx.getStorageSync('userInfo').userId;
     const reviewList = this.data.answers.map((item, index) => {
       return {
         viewId: index + 1,
         optionId: item,
-        userId
       }
     })
 

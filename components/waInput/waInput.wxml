@@ -1,0 +1,3 @@
+<list-item showArrow='{{false}}' label='{{label}}'>
+  <input type='{{type}}' value='{{value}}' placeholder='请输入收入' placeholder-class='placeholder' bindinput='handleInput'></input>
+</list-item>

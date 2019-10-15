@@ -4,5 +4,6 @@
   <view class='placeholder' wx:if='{{placeholder && !content}}'>{{placeholder}}</view>
   <view class='content' wx:if='{{content}}'>{{content}}</view>
   <slot></slot>
+  <slot name='right'></slot>
   <image class='arrow-right' wx:if='{{showArrow}}' src='/assets/images/iconArrowRight.png'></image>
 </view>

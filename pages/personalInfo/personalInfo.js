@@ -1,4 +1,6 @@
-// pages/personalInfo/personalInfo.js
+const enums = require('../../assets/utils/enums.js');
+const apis = require('../../assets/utils/apis.js');
+
 Page({
 
   /**
@@ -6,36 +8,113 @@ Page({
    */
   data: {
     form: {
-      birthday: '1996-07-21',
-      job: '',
+      coverAddress: '',
+      birthday: '',
+      work: '',
       height: '',
-      education: ''
+      education: '',
+      voiceIntroduceAddress: ''
+    },
+    formData: {
+      coverAddress: '',
+      birthday: '',
+      work: '',
+      height: '',
+      education: '',
+      voiceIntroduceAddress: ''
     },
     source: {
-      jobList: ['学生', '教师', '医生'],
       heightList: [...Array(221).keys()].slice(140),
-      educationList: ['大专', '本科', '硕士']
+      educationList: enums.educationList
     },
-    voiceDialogShow: true
+    voiceVisible: false
+  },
+  handleNext() {
+    const {formData} = this.data
+    const rules = {
+      coverAddress: '请上传您的封面照片',
+      birthday: '请选择您的生日',
+      work: '请输入您的工作',
+      height: '请选择您的身高',
+      education: '请选择您的学历'
+    }
+
+    const validRes = Object.keys(rules).every(item => {
+      if (!formData[item]) {
+        wx.showToast({
+          title: rules[item],
+          icon: 'none'
+        })
+        return false
+      }
+      return true
+    })
+    if(!validRes) {
+      return
+    }
+    this.setData({
+      voiceVisible: true
+    })
+  },
+  uploadAvator() {
+    wx.chooseImage({
+      success: res => {
+        wx.showLoading({
+          title: '上传中',
+        })
+        wx.uploadFile({
+          url: 'https://www.shanguokj.com/weiaiwang/file/upload/common',
+          header: {
+            'Cookie': `token=${wx.getStorageSync('userInfo').cookie.value}`
+          },
+          filePath: res.tempFilePaths[0],
+          name: 'file',
+          success: res => {
+            this.setData({
+              'form.coverAddress': JSON.parse(res.data).data,
+              'formData.coverAddress': JSON.parse(res.data).data,
+            })
+            wx.hideLoading()
+          }
+        })
+      },
+    })
+  },
+  uploadVoice(e) {
+    this.setData({
+      'form.voiceIntroduceAddress': e.detail,
+      'formData.voiceIntroduceAddress': e.detail
+    })
+    apis.editUserInfo(this.data.formData).then(res => {
+      setTimeout(() => {
+        wx.switchTab({
+          url: '/pages/recommend/recommend',
+        })
+      }, 1000)
+    })
   },
   handleBirthdayChange(e) {
     this.setData({
-      'form.birthday': e.detail.value
+      'form.birthday': e.detail.value,
+      'formData.birthday': e.detail.value,
     })
   },
-  handleJobChange(e) {
+  handleJobInput(e) {
     this.setData({
-      'form.job': e.detail.value
+      'form.work': e.detail.value,
+      'formData.work': e.detail.value,
     })
   },
   handleHeightChange(e) {
     this.setData({
-      'form.height': e.detail.value
+      'form.height': e.detail.value,
+      'formData.height': this.data.source.heightList[e.detail.value],
     })
   },
   handleEducationChange(e) {
     this.setData({
-      'form.education': e.detail.value
+      'form.education': e.detail.value,
+      'formData.education': this.data.source.educationList[e.detail.value].key,
     })
   },
   /**

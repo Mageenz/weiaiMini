@@ -38,3 +38,22 @@
   color: #565656;
   letter-spacing:2rpx;
 }
+.icon-loading {
+  width: 46rpx;
+  height: 46rpx;
+  animation-name: loading;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  margin-top: 46rpx;
+  margin-bottom: 53rpx;
+}
+@keyframes loading {
+  form {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}

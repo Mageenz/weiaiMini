@@ -5,8 +5,13 @@
 .ff-r {
   font-family:PingFangSC-Regular;
 }
-
+.fw-b {
+  font-weight: bold;
+}
 /* 字体大小 */
+.fs22 {
+  font-size: 22rpx;
+}
 .fs24 {
   font-size: 24rpx;
 }

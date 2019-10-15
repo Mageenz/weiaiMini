@@ -1,0 +1,62 @@
+<view class='bg-grey-light' wx:if='{{info}}'>
+  <view class='p30 bg-white mb20'>
+    <view class='swiper-container'>
+      <swiper class='swiper' indicator-dots circular>
+        <block wx:if='{{info.albumList.length}}'>
+          <swiper-item class='swiper-item' wx:for='{{info.albumList}}'>
+            <view class='photo' style='{{"background-image:url(" + item + ")"}}'></view>
+          </swiper-item>
+        </block>
+        <swiper-item wx:else>
+          <view class='photo' style='{{"background-image:url(" + info.avatar + ")"}}'></view>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class='info'>
+      <view class='fs34 fw-b mb30 flex'>
+        <text class='mr10'>{{info.username}}</text>
+        <image class='icon-checked' src='../../assets/images/iconChecked.png'></image>
+      </view>
+      <view class="flex">
+        <view class="flex-1">
+          <view class='fs24 c-light mb10'>{{marriageMap[info.marriage]}}{{info.age ? ' . ' + info.age + '岁' : ''}} . {{info.height}}cm</view>
+          <!-- <view class='fs24 c-light mb10'>工作地点：阿斯达大大</view> -->
+          <view class='fs24 c-light'>月收入：{{info.income}}元 . {{educationMap[info.education]}}</view>
+        </view>
+        <image src="../../assets/images/iconSound.png" class="voice" bindtap="playSound"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='bg-white p30 mb20'>
+    <view class='title mb50'>
+      <text class='bg-red pt10 pb10 pl20 pr20 c-white fs24'>择偶要求</text>
+    </view>
+    <view class='flex pl30 pr30 fs24 mb20'>
+      <view class='flex-1 flex'>
+        <text class='c-light'>年龄：</text>
+        <text>{{info.otherAgeMin}} ~ {{info.otherAgeMax}} 岁</text>
+      </view>
+      <view class='flex-1 flex fs24'>
+        <text class='c-light'>月收入：</text>
+        <text>{{info.otherIncomeMin}} 元以上</text>
+      </view>
+    </view>
+    <view class='flex pl30 pr30 fs24 mb20'>
+      <view class='flex-1 flex'>
+        <text class='c-light'>身高：</text>
+        <text>{{info.otherHeightMin}}~{{info.otherHeightMax}}cm</text>
+      </view>
+      <view class='flex-1 flex fs24'>
+        <text class='c-light'>学历：</text>
+        <text>{{educationMap[info.otherEducationMin]}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='p20 bg-white'>
+    <wa-button wx:if='{{info.loveStatus === 0}}' bindclick='handleSubmit'>喜欢TA</wa-button>
+    <wa-button wx:if='{{info.loveStatus === 1}}' type='grey'>等待对方回复...</wa-button>
+    <wa-button wx:if='{{info.loveStatus === 2}}' type='yellow'>双方喜欢</wa-button>
+  </view>
+</view>

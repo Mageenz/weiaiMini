@@ -1,0 +1,7 @@
+<view>
+  <image mode='widthFix' class='img-vip' src='../../assets/images/imgVip.png'></image>
+  <view class='foot flex'>
+    <view class='flex-1'>总计：<text class='fw-b fs30'>200.00</text> 元</view>
+    <view class='btn-submit' bindtap='handlePay'>去支付</view>
+  </view>
+</view>

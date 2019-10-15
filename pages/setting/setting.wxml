@@ -1,0 +1,31 @@
+<view class='bg-grey-light'>
+  <view class='title'>
+    <text class='line'></text>
+    <text class='label'>基本信息</text>
+  </view>
+  <list-item label='头像' bindclick='uploadAvator' content=' '>
+    <image class='avator' src='{{formData.avatar}}' slot='right' />
+  </list-item>
+  <wa-input label='昵称' value='{{formData.username}}' placeholder='请输入昵称' bindinput='handleNameChange' />
+  <list-item label='内心独白' showArrow='{{false}}' content=' '>
+    <image class="voice" wx:if='{{form.voiceIntroduceAddress}}' src="../../assets/images/iconSound.png" slot='right' bindtap='playVoice'></image>
+    <view wx:else>-</view>
+  </list-item>
+  <wa-picker value='{{formData.sex}}' range='{{sexRange}}' label='性别' placeholder='请选择您的性别' bindchange='handleSexChange' />
+  <wa-picker mode='date' value='{{formData.birthday}}' label='生日' placeholder='请选择您的生日' bindchange='handleBirthdayChange' />
+  <wa-input label='身高' value='{{formData.height}}' placeholder='请输入您的身高' bindinput='handleHeightChange' />
+  <wa-input value='{{formData.income}}' placeholder='请输入月收入' label='月收入' bindinput='handleIncomechange' />
+  <wa-picker value='{{formData.education}}' range='{{educationRange}}' label='学历' placeholder='请选择您的学历' bindchange='handleEducationChange' />
+  <wa-picker value='{{formData.marriage}}' range='{{marriageRange}}' label='婚姻状况' placeholder='请选择您的婚姻状况' bindchange='handleMarriageChange' />
+  <view class='title'>
+    <text class='line'></text>
+    <text class='label'>择偶条件</text>
+  </view>
+  <wa-picker value='{{formData.otherAge}}' range='{{ageRange}}' label='年龄' placeholder='请选择对方的年龄' bindchange='handleOtherAgeChange' />
+  <wa-picker value='{{formData.otherHeight}}' range='{{heightRange}}' label='身高' placeholder='请选择对方的身高' bindchange='handleOtherHeightChange' />
+  <wa-input value='{{formData.otherIncomeMin}}' placeholder='请选择对方的月收入' label='月收入' bindinput='handleOtherIncomechange' />
+  <wa-picker value='{{formData.otherEducationMin}}' range='{{educationRange}}' label='对方学历' placeholder='请选择对方的学历' bindchange='handleOtherEducationChange' />
+  <view class='p30'>
+    <wa-button bindclick='handleSubmit'>确定</wa-button>
+  </view>
+</view>
